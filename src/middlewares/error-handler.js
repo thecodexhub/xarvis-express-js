@@ -1,4 +1,5 @@
 const config = require('../config/config');
+const logger = require('../config/logger');
 
 const errorHandler = (err, req, res, next) => {
   const { statusCode, message } = err;
@@ -10,8 +11,7 @@ const errorHandler = (err, req, res, next) => {
   };
 
   if (config.env === 'development') {
-    // TODO: add logger error
-    console.error(err);
+    logger.error(err);
   }
 
   res.status(statusCode).send(response);

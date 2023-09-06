@@ -2,13 +2,20 @@ const express = require('express');
 const helmet = require('helmet');
 const compression = require('compression');
 const cors = require('cors');
+const httpStatus = require('http-status');
+const config = require('./config/config');
+const morgan = require('./config/morgan');
 const xss = require('./middlewares/xss');
 const ApiError = require('./utils/api-error');
-const httpStatus = require('http-status');
 const errorConverter = require('./middlewares/error-converter');
 const errorHandler = require('./middlewares/error-handler');
 
 const app = express();
+
+if (config.env !== 'test') {
+  app.use(morgan.succesHandler);
+  app.use(morgan.errorHandler);
+}
 
 // Set Security HTTP Headers
 app.use(helmet());
