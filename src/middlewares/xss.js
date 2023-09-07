@@ -1,6 +1,7 @@
 const xssFilters = require('xss-filters');
 
-const clean = (data = '') => {
+const clean = (rawData = '') => {
+  let data = rawData;
   let isObject = false;
 
   if (typeof data === 'object') {
