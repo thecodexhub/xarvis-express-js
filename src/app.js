@@ -9,6 +9,7 @@ const xss = require('./middlewares/xss');
 const ApiError = require('./utils/api-error');
 const errorConverter = require('./middlewares/error-converter');
 const errorHandler = require('./middlewares/error-handler');
+const routes = require('./routes/v1');
 
 const app = express();
 
@@ -33,9 +34,8 @@ app.use(compression());
 app.use(cors());
 app.options('*', cors());
 
-// routes go here ------
-
-// -----
+// Routes
+app.use('/v1', routes);
 
 // Respond with a 404 for any unknown API request.
 app.use((req, res, next) => {
