@@ -12,7 +12,7 @@ const errorHandler = require('./middlewares/error-handler');
 const routes = require('./routes/v1');
 const apiRateLimiter = require('./middlewares/rate-limiter');
 
-const app = express()
+const app = express();
 
 if (config.env !== 'test') {
   app.use(morgan.succesHandler);
