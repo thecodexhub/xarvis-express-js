@@ -10,6 +10,7 @@ const ApiError = require('./utils/api-error');
 const errorConverter = require('./middlewares/error-converter');
 const errorHandler = require('./middlewares/error-handler');
 const routes = require('./routes/v1');
+const apiRateLimiter = require('./middlewares/rate-limiter');
 
 const app = express();
 
@@ -33,6 +34,12 @@ app.use(compression());
 // enable cors
 app.use(cors());
 app.options('*', cors());
+
+// limit repeated failed requests to all the endpoints
+// For specific endpoints, use `app.use('/path', apiRateLimiter)`
+if (config.env === 'production') {
+  app.use(apiRateLimiter);
+}
 
 // Routes
 app.use('/v1', routes);
