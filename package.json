@@ -11,17 +11,13 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prettier": "prettier --check **/*.js",
-    "prettier:fix": "prettier --write **/*.js"
+    "prettier:fix": "prettier --write **/*.js",
+    "prepare": "husky install"
   },
   "author": "Sandip Pramanik (@thecodexhub)",
   "license": "MIT",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "*": "prettier --write **/*.js"
+    "*": "npm run prettier:fix"
   },
   "dependencies": {
     "compression": "^1.7.4",
