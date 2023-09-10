@@ -1,6 +1,9 @@
 # Xarvis Express JS
 
-Node and Express Starter Template.
+Node and Express Starter Template - JavaScript.
+
+![node express workflow](https://github.com/thecodexhub/xarvis-express-js/actions/workflows/ci.yml/badge.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Features
 
