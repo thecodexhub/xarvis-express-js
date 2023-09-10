@@ -1,13 +1,16 @@
 {
   "env": {
-    "node": true
+    "node": true,
+    "jest": true
   },
   "extends": [
     "airbnb-base",
     "plugin:security/recommended",
+    "plugin:jest/recommended",
     "plugin:prettier/recommended"
   ],
   "plugins": [
+    "jest",
     "security",
     "prettier",
     "import"
@@ -20,19 +23,7 @@
     "func-names": "off",
     "no-underscore-dangle": "off",
     "consistent-return": "off",
+    "jest/expect-expect": "off",
     "security/detect-object-injection": "off"
-    // "import/order": [
-    //   "error",
-    //   {
-    //     "groups": [
-    //       "index",
-    //       "sibling",
-    //       "parent",
-    //       "internal",
-    //       "external",
-    //       "builtin"
-    //     ]
-    //   }
-    // ]
   }
 }
