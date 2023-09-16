@@ -25,3 +25,4 @@ Node and Express Starter Template - JavaScript.
 * Add a health check route
 * Rate limiter for repeater failed requests
 * Add unit tests with jest and supertest
+* Github workflow
