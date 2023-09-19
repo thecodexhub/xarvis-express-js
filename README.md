@@ -23,5 +23,5 @@ Node and Express Starter Template - JavaScript.
 * process.exit on unhandled exception/rejection
 * Custom logging with Winston and Morgan
 * Add a health check route
-* Rate limiter for repeater failed requests
+* Rate limiter for repeated failed requests in production environment
 * Add unit tests with jest and supertest
