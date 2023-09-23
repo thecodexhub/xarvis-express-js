@@ -1,6 +1,6 @@
 {
   "name": "xarvis-express-js",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "An Express app with JavaScript made by Xarvis.",
   "main": "src/index.js",
   "scripts": {
