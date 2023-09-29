@@ -26,3 +26,17 @@ Node and Express Starter Template - JavaScript.
 * Rate limiter for repeated failed requests in production environment
 * Add unit tests with jest and supertest
 * Github workflow
+
+## Project setup
+
+Create a `.env` file in the root folder, and add the following line
+
+```
+PORT = <PORT_NUMBER>
+```
+
+Then try running the following command to start up the server locally
+
+```
+$ npm run dev
+```
